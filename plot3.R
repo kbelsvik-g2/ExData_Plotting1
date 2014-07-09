@@ -12,9 +12,9 @@ data$datetime <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 
 # Create the plot in plot3.png
 png("plot3.png")
-with(data, {plot(data$datetime, data$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
-            points(data$datetime, data$Sub_metering_2, type="l", col="red")
-            points(data$datetime, data$Sub_metering_3, type="l", col="blue")
+with(data, {plot(datetime, Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
+            points(datetime, Sub_metering_2, type="l", col="red")
+            points(datetime, Sub_metering_3, type="l", col="blue")
             legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = 1, col=c("black", "red", "blue"))
 })
 dev.off()
